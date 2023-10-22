@@ -1,16 +1,19 @@
 package com.cardif.tsp.websso.domain;
 
-import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
 @Builder
-public class Users {
+@NoArgsConstructor
+@AllArgsConstructor
+public class User {
 
-	@JsonProperty("users")
-	private List<Users> users;
 
 	@JsonProperty("disableableCredentialTypes")
 	private List<Object> disableableCredentialTypes;

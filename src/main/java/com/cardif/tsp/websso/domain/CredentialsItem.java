@@ -1,7 +1,11 @@
 package com.cardif.tsp.websso.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Builder;
+import lombok.Data;
 
+@Data
+@Builder
 public class CredentialsItem{
 
 	@JsonProperty("hashedSaltedValue")
@@ -18,24 +22,4 @@ public class CredentialsItem{
 
 	@JsonProperty("algorithm")
 	private String algorithm;
-
-	public String getHashedSaltedValue(){
-		return hashedSaltedValue;
-	}
-
-	public String getSalt(){
-		return salt;
-	}
-
-	public int getHashIterations(){
-		return hashIterations;
-	}
-
-	public String getType(){
-		return type;
-	}
-
-	public String getAlgorithm(){
-		return algorithm;
-	}
 }
